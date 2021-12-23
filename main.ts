@@ -2,15 +2,18 @@ function led2 (y: number, speed: number) {
     while (true) {
         for (let index = 0; index <= 4; index++) {
             if (list[y][index] == 1) {
-                led.plot(index, y)
+                led.plot(y, index)
             } else {
-                led.unplot(index, y)
+                led.unplot(y, index)
             }
         }
         list[y].unshift(list[y].pop())
         basic.pause(speed)
     }
 }
+input.onButtonPressed(Button.B, function () {
+	
+})
 let list: number[][] = []
 list = [
 [
